@@ -81,32 +81,39 @@ const StemInfographic = () => {
           className="w-full h-auto"
           preserveAspectRatio="xMidYMid meet"
         >
-          {/* Main thick stem */}
+          {/* Main thick trunk */}
           <path
             d="M100 20 C95 100, 108 180, 100 260 C92 340, 110 420, 100 500 C90 580, 105 640, 100 680"
-            stroke="hsl(120 25% 32%)"
-            strokeWidth="28"
+            stroke="hsl(30 40% 28%)"
+            strokeWidth="42"
             fill="none"
             strokeLinecap="round"
           />
-          {/* Stem inner highlight */}
+          {/* Trunk inner highlight */}
           <path
             d="M100 20 C95 100, 108 180, 100 260 C92 340, 110 420, 100 500 C90 580, 105 640, 100 680"
-            stroke="hsl(120 30% 40%)"
-            strokeWidth="12"
+            stroke="hsl(30 35% 35%)"
+            strokeWidth="18"
             fill="none"
             strokeLinecap="round"
             opacity="0.4"
           />
-          {/* Stem texture lines */}
-          {[80, 180, 300, 420, 540, 620].map((y) => (
+          {/* Bark texture lines */}
+          <path d="M88 60 L88 120" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.3" />
+          <path d="M112 100 L112 170" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.3" />
+          <path d="M90 200 L90 280" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.25" />
+          <path d="M110 320 L110 400" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.3" />
+          <path d="M92 440 L92 520" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.25" />
+          <path d="M108 560 L108 640" stroke="hsl(30 30% 20%)" strokeWidth="1.5" opacity="0.3" />
+          {/* Trunk knot marks */}
+          {[80, 200, 350, 500, 620].map((y) => (
             <ellipse
               key={y}
               cx="100"
               cy={y}
-              rx="16"
-              ry="3"
-              fill="hsl(120 30% 22%)"
+              rx="22"
+              ry="4"
+              fill="hsl(30 35% 20%)"
               opacity="0.2"
             />
           ))}
@@ -114,10 +121,10 @@ const StemInfographic = () => {
           <ellipse
             cx="100"
             cy="685"
-            rx="60"
-            ry="14"
-            fill="hsl(30 40% 30%)"
-            opacity="0.5"
+            rx="70"
+            ry="16"
+            fill="hsl(30 40% 25%)"
+            opacity="0.6"
           />
         </svg>
 
